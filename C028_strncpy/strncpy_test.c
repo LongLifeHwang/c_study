@@ -1,0 +1,12 @@
+#include <stdio.h>
+#include <string.h>
+
+int main()
+{
+	char src[10] = "Hello!";
+	char dest[10];
+
+	strcpy(dest, src, 3);
+	printf("%s\n", dest);
+	return 0;
+}
