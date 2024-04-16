@@ -34,7 +34,7 @@ void    loop()
 
     cur = debounce_toggle(last);
     if (last == 0 && cur == 1)
-        !value;
+        value = !value;
     digitalWrite(LED, value);
     last = cur;
 }
