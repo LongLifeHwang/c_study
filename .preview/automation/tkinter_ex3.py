@@ -16,5 +16,3 @@ out.grid(row = 1, column = 0)
 entry.grid(row = 0, column = 2)
 button.grid(row = 0, column = 3)
 root.mainloop()
-
-
