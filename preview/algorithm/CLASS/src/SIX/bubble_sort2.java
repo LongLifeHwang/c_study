@@ -2,7 +2,7 @@ package SIX;
 
 import java.util.Scanner;
 
-public class bubble_sort1
+public class bubble_sort2
 {
     static void swap(int[] x, int n, int m)
     {
@@ -13,20 +13,29 @@ public class bubble_sort1
         x[m] = temp;
     }
 
-    static void sort1(int[] x)
+    static void sort2(int[] x)
     {
         int len;
+        int k;
+        int last;
 
+        k = 0;
         len = x.length;
-        for (int i = 0; i < len; i++)
+        while (k < len - 1)
         {
-            for (int j = len - 1; j > 0; j--)
+            last = len - 1;
+            for (int i = len - 1; i > k; i--)
             {
-                if (x[j] > x[j - 1])
-                    swap(x, j, j - 1);
+                if (x[i] > x[i - 1])
+                {
+                    swap(x, i, i - 1);
+                    last = i;
+                }
             }
+            k = last;
         }
     }
+
     public static void  main(String[] args)
     {
         int     N;
@@ -40,9 +49,8 @@ public class bubble_sort1
             System.out.printf("x[%d] : ", i);
             x[i] = stdIn.nextInt();
         }
-        sort1(x);
+        sort2(x);
         for (int i = 0; i < N; i++)
             System.out.printf("x[%d] : %d\n", i, x[i]);
-    }
-
+    }    
 }
