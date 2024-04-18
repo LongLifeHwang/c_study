@@ -6,18 +6,18 @@ public class Gcd_ex
 {
     static int  gcd(int x, int y)
     {
-        int temp;
+        // int temp;
 
-        if (x < y)
-        {
-            temp = x;
-            x = y;
-            y = temp;
-        }
+        // if (x < y)
+        // {
+        //     temp = x;
+        //     x = y;
+        //     y = temp;
+        // }
         x = x % y;
         if (x == 0)
             return (y);
-        return (gcd(x, y));
+        return (gcd(y, x));
     }
     public static void  main(String[] args)
     {
