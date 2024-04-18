@@ -2,7 +2,7 @@ package SIX;
 
 import java.util.Scanner;
 
-public class SIX
+public class bubble_sort3
 {
     static void swap(int[] x, int m, int n)
     {
@@ -13,19 +13,18 @@ public class SIX
         x[n] = temp;
     }
 
-    static void sort2(int[] x)
+    static void sort3(int[] x)
     {
-        int len;
+        int left;
+        int right;
         int k;
-        int last;
 
-        len = x.length;
-        k = 0;
-        last = 0;
-        while (k < len - 1)
+        left = 0;
+        right = x.length - 1;
+        while (left < right)
         {
-            k = len - 1;
-            for (int i = len - 1; i > last; i--)
+            k = right;
+            for (int i = right; i > left; i--)
             {
                 if (x[i] < x[i - 1])
                 {
@@ -33,7 +32,17 @@ public class SIX
                     k = i;
                 }
             }
-            last = k;
+            left = k;
+            k = left;
+            for (int i = left; i < right; i++)
+            {
+                if (x[i] > x[i + 1])
+                {
+                    swap(x, i, i + 1);
+                    k = i;
+                }
+            }
+            right = k;
         }
     }
 
@@ -51,10 +60,9 @@ public class SIX
             System.out.printf("x[%d] : ", i);
             x[i] = stdIn.nextInt();
         }
-        sort2(x);
+        sort3(x);
         System.out.printf("오름차순으로 정렬을 하였습니다. \n");
         for (int i = 0; i < N; i++)
             System.out.printf("x[%d] : %d\n", i, x[i]);
-    }
+    }    
 }
-
