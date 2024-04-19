@@ -18,7 +18,7 @@ public class Queue
 
     public Queue(int S)
     {
-        S = size;
+        size = S;
         idx = 0;
         x = new int[S];
     }
@@ -38,6 +38,7 @@ public class Queue
         {
             x[i - 1] = x[i];
         }
+        idx--;
     }
 
     public int  getIdx()
