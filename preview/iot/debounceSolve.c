@@ -4,12 +4,12 @@
 #define LED 13
 
 int pre = 0;
-int value = 0;
+volatile int value = 0;
 
 void    setup()
 {
-    pinMode(PIN, 0);
     pinMode(LED, 1);
+    attachInterrupt(digitalPinToInterrupt(PIN), debounce1, RISING);
 }
 
 int debounce0()
@@ -23,6 +23,13 @@ int debounce0()
         temp = digitalRead(PIN);
     }
     return (temp);
+}
+
+void    debounce1()
+{
+    _delay_ms(10);
+    if (digitalRead(PIN) == 1)
+        value = !value;
 }
 
 void    loop()
