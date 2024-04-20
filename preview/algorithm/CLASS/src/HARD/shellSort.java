@@ -1,4 +1,4 @@
-package SEVEN;
+package HARD;
 
 import java.util.Scanner;
 
@@ -6,12 +6,12 @@ public class shellSort
 {
     static void shell(int[] x, int len)
     {
-        int temp;
         int h;
         int j;
+        int temp;
 
-        for (h = 0; h < len; h = h * 3 + 1);
-        for (; h > 0; h /= 3)
+        for (h = 0; h < len; h = 3 * h + 1);
+        for (; h > 0; h/= 3)
         {
             for (int i = h; i < len; i++)
             {
