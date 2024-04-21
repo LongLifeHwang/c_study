@@ -91,6 +91,11 @@ for k in grade.keys():
 print("\n====13====")
 days = {'January' : 31, 'February' : 28, 'March' : 31, 'April' : 30, 'May' : 31, 'June' : 30, 'July' : 31, 'Agust' : 31, 'Septembr' : 30, 'October' : 31, 'November' : 30, 'December' : 31}
 print(days['April'])
+s = []
+for i in days.keys():
+    if (days[i] == 30):
+        s.append(i)
+print(s)
 
 
 
