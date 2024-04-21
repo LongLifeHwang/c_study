@@ -97,6 +97,7 @@ for i in days.keys():
         s.append(i)
 print(s)
 
+print("\n====14====")
 def total(*numbers):
     sum = 0
     for n in numbers:
@@ -104,6 +105,28 @@ def total(*numbers):
     return (sum)
 print(total(1, 2, 3, 4, 5))
 
+print("\n====15====")
+class Square:
+    def __init__(self, side_length):
+        self.side_length = side_length
+    def area(self):
+        return (self.side_length * self.side_length)
+    def perimeter(self):
+        return (4 * self.side_length)
+    def diagonal(self):
+        return (self.side_lenth * self.side_length) ** 0.5
 
+print("\n====16====")
+class Animal:
+    def __init__(self, name):
+        self.name = name
+    def speak(self):
+        print(f'내 이름은 {self.name}입니다.')
+class Dog(Animal):
+    def speak(self):
+        super().speak()
+        print("멍멍!")
+dog = Dog('Hory')
+dog.speak()
 
     
