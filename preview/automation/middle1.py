@@ -73,4 +73,25 @@ password.set_password("hi2")
 password.set_password("hi")
 print(f'get_password() : {password.get_password()}')
 print(f'is_correct() : {password.is_correct("hi2")}')
+
+print("\n====11====")
+def first_diff(str1, str2):
+    if (str1 == str2):
+        return (-1)
+    for i in range(len(str1)):
+        if (str1[i] != str2[i]):
+            return (i)
+print(f'{first_diff("hi", "hi2")}')
+
+print("\n====12====")
+grade = {"A" : 8, "D" : 3, "B" : 15, "F" : 0, "C" : 6}
+for k in grade.keys():
+    print(k)
+
+print("\n====13====")
+days = {'January' : 31, 'February' : 28, 'March' : 31, 'April' : 30, 'May' : 31, 'June' : 30, 'July' : 31, 'Agust' : 31, 'Septembr' : 30, 'October' : 31, 'November' : 30, 'December' : 31}
+print(days['April'])
+
+
+
     
