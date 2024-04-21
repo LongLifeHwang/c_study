@@ -97,6 +97,13 @@ for i in days.keys():
         s.append(i)
 print(s)
 
+def total(*numbers):
+    sum = 0
+    for n in numbers:
+        sum += n
+    return (sum)
+print(total(1, 2, 3, 4, 5))
+
 
 
     
