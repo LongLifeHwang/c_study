@@ -23,13 +23,6 @@ for i in a[::2]:
     total += i
 print(total)
 
-print("\n====5====")
-a = [1, 2, -2, 4, 7, 6, 9, 2, -3, 0]
-total = 0
-for i in a[::2]:
-    total += i
-print(total)
-
 print("\n====6=====")
 register = [{'name':'Todd', 'phone' : '555-1414'}, {'name':'Helga', 'phone' : '555-1618'}, {'name':'Princess', 'phone' : '555-3241'}, {'name':'LJ', 'phone' : '555-2718'}]
 for people in register:
@@ -78,7 +71,7 @@ print("\n====11====")
 def first_diff(str1, str2):
     if (str1 == str2):
         return (-1)
-    for i in range(len(str1)):
+    for i in range(min(len(str1), len(str2))):
         if (str1[i] != str2[i]):
             return (i)
 print(f'{first_diff("hi", "hi2")}')
