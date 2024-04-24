@@ -122,4 +122,53 @@ class Dog(Animal):
 dog = Dog('Hory')
 dog.speak()
 
+
+
+
+
+
+
+
+from tkinter import *
+
+def display():
+    label_text = ''
+    if show_totals.get() == True:
+        label_text += "'Show Totals' checked"
+    else:
+        label_text += "'Show Totals' unchecked"
+    
+    if radio.get() == 'day':
+        label_text += " and 'Day' selected"
+    elif radio.get() == 'month':
+        label_text += " and 'Month' selected"
+    elif radio.get() == 'year':
+        label_text += " and 'Year' selected"
+    label.configure(text = label_text)
+    
+root = Tk()
+
+show_totals = BooleanVar()
+#check = Checkbutton(root, text = 'Show Totals', var=show_totals, command=display)
+check = Checkbutton(root, text = 'Show Totals', var=show_totals)
+
+radio = StringVar()
+radio.set('day')
+daybutton = Radiobutton(text ='Day', var = radio, value='day')
+monthbutton = Radiobutton(text ='Month', var = radio, value='month')
+yearbutton = Radiobutton(text ='Year', var = radio, value='year')
+
+button = Button(text='확인', command=display)
+label = Label()
+
+check.grid(row=0, column=0, sticky=W)
+button.grid(row=0, column=1, sticky=W)
+daybutton.grid(row=1, column=0, sticky=W)
+monthbutton.grid(row=1, column=1, sticky=W)
+yearbutton.grid(row=1, column=2)
+label.grid(row=2, column=0)
+
+root.mainloop()
+
+
     
