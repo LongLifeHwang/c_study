@@ -13,8 +13,10 @@ public class stackTest
         int     num;
         int     size;
 
-        System.out.printf("stack size : ");
-        size = stdIn.nextInt();
+        do {
+            System.out.printf("stack size : ");
+            size = stdIn.nextInt();
+        } while (size <= 0);
         try {
             test = new stack(size);
         }

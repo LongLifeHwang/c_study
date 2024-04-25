@@ -1,7 +1,7 @@
-package test;
+package TEST;
 
 import java.util.Scanner;
-import test.stack;
+import TEST.stack;
 
 public class stackTest
 {
@@ -13,21 +13,22 @@ public class stackTest
         int     num;
         int     data;
 
-        System.out.printf("N : ");
-        N = stdIn.nextInt();
-        // do {
-        //     System.out.printf("N : ");
-        //     N = stdIn.nextInt();
-        // } while (N <= 0);
-        testS = new stack(N);
-        // try
-        // {
-        //     testS = new stack(N);
-        // }
-        // catch (stack.Empty e)
-        // {
-        //     System.out.printf("new error\n");
-        // }
+        // System.out.printf("N : ");
+        // N = stdIn.nextInt();
+        do {
+            System.out.printf("N : ");
+            N = stdIn.nextInt();
+        } while (N <= 0);
+        // testS = new stack(N);
+        try
+        {
+            testS = new stack(N);
+        }
+        catch (stack.Empty e)
+        {
+            System.out.printf("new error\n");
+            return ;
+        }
         while (true)
         {
             do {
