@@ -32,7 +32,7 @@ public class linear
         }
         System.out.printf("search : ");
         search = stdIn.nextInt();
-        answer = linearSearch(x, N, search); 
+        answer = linearSearch(x, N, search);
         if (answer < 0)
             System.out.printf("%d는 존재하지 않습니다. \n", search);
         else
